@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+/.mvn/wrapper/
+/src/test/java/com/example/day/
+/mvnw
+mvnw.cmd
