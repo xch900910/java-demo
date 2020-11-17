@@ -17,7 +17,7 @@ public class ThreadDemo {
                     System.out.println(Thread.currentThread() + "等待结束");
                 } catch (InterruptedException e) {
                     // do somethings
-                    System.out.println(Thread.currentThread()+"抛出异常"+e.getMessage());
+                    System.out.println(Thread.currentThread()+"抛出异常"+e);
                 }
             }
         }, "thread1");
