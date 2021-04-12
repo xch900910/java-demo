@@ -4,23 +4,21 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
-import java.nio.channels.SelectableChannel;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
-import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class Client {
+public class Client1 {
     public static void main(String[] args) throws IOException {
-        new Client().start();
+        new Client1().start();
     }
 
-    public Client() throws IOException {
+    public Client1() throws IOException {
         this.init();
     }
 
