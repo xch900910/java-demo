@@ -90,7 +90,7 @@ public class HTTPClient {
             int port = 8080;
 
             // Path
-            String path = "/";
+            String path = "/test";
             System.out.println("Which HTTP method(GET/POST) do you want to use?");
             Scanner scanner = new Scanner(System.in);
             // Method GET/POST
