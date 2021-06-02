@@ -1,4 +1,4 @@
-package com.example.day.jun.day1.demo1;
+package com.example.day.designPattern.observer.demo1;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,4 +1,4 @@
-package com.example.day.jun.day1.demo2;
+package com.example.day.designPattern.observer.demo2;
 
 /**
  * @author: xiongchaohua
