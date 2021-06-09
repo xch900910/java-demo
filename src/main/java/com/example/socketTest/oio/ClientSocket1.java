@@ -1,9 +1,9 @@
-package com.example.socketTest.demo2;
+package com.example.socketTest.oio;
 
 import java.io.*;
 import java.net.Socket;
 
-public class ClientSocket1_copy {
+public class ClientSocket1 {
     public static void main(String[] args) {
         Socket socket = null;
         try {
