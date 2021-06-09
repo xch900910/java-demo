@@ -1,4 +1,4 @@
-package com.example.httpServerTest;
+package com.example.smallGame;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package com.example.workFast.util;
+package com.example.workNote.util;
 
 import javax.crypto.Cipher;
 import java.io.ByteArrayInputStream;

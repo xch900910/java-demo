@@ -1,4 +1,4 @@
-package com.example.jdbcTest;
+package com.example.socketTest.demo4;
 
 /**
  * @author xch900910
@@ -20,16 +20,16 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
-public class Client1 {
+public class Client {
 
     public static void main(String[] args) throws IOException {
-        new Client1().start(); // 客户端程序执行入口
+        new Client().start(); // 客户端程序执行入口
     }
 
     /**
      * 注册监听的服务的端口，并初始化
      */
-    public Client1() throws IOException {
+    public Client() throws IOException {
         this.serverSocketAddress = new InetSocketAddress("127.0.0.1", 9999);
         this.init();
     }
@@ -105,7 +105,7 @@ public class Client1 {
                     // 通过System.in IO流来创建Scanner
                     Scanner scanner = new Scanner(System.in);
                     // 使用线程池来完成对客户端的控制台数据输入的监听
-                    executorService.submit(() -> {
+                    executorService.submit( () -> {
                         while (true) {
                             try {
                                 // 清空写缓冲区

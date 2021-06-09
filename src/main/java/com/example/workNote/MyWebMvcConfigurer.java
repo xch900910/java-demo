@@ -1,4 +1,4 @@
-package com.example.workFast;
+package com.example.workNote;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

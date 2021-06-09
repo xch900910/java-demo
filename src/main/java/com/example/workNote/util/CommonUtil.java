@@ -1,11 +1,11 @@
-package com.example.workFast.util;
+package com.example.workNote.util;
 
 import com.google.common.base.Joiner;
 
 import java.util.Map;
 import java.util.TreeMap;
 
-import static com.example.workFast.Constants.*;
+import static com.example.workNote.Constants.*;
 
 /**
  * @author: xiongchaohua

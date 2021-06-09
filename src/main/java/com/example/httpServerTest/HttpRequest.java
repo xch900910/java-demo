@@ -3,7 +3,7 @@ package com.example.httpServerTest;
 import java.io.IOException;
 import java.net.Socket;
 
-public class SocketSend {
+public class HttpRequest {
     public static void main(String args[]) throws IOException {
         String request = "GET / HTTP/1.1\r\n" +
                 "Host: localhost\r\n" +

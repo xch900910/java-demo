@@ -1,4 +1,4 @@
-package com.example.workFast;
+package com.example.workNote;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package com.example.workFast;
+package com.example.workNote;
 
 /**
  * 响应码枚举，参考HTTP状态码的语义

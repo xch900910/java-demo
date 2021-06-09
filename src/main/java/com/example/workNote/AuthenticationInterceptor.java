@@ -1,9 +1,9 @@
-package com.example.workFast;
+package com.example.workNote;
 
 import com.alibaba.fastjson.JSON;
 
-import com.example.workFast.util.SignUtil;
-import com.example.workFast.util.CommonUtil;
+import com.example.workNote.util.SignUtil;
+import com.example.workNote.util.CommonUtil;
 import com.google.common.base.Strings;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 import java.util.*;
 
-import static com.example.workFast.Constants.*;
+import static com.example.workNote.Constants.*;
 
 
 /**

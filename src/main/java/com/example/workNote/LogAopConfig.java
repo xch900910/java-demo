@@ -1,4 +1,4 @@
-package com.example.workFast;
+package com.example.workNote;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
-import static com.example.workFast.Constants.DATE_UNIFIED_FORMATTER;
+import static com.example.workNote.Constants.DATE_UNIFIED_FORMATTER;
 
 
 /**
