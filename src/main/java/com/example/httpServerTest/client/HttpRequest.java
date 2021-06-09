@@ -1,4 +1,4 @@
-package com.example.httpServerTest;
+package com.example.httpServerTest.client;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -28,7 +28,7 @@ public class HttpRequest {
     }
 
     public static void sendData(String host, String msg) throws IOException {
-        Socket sock = new Socket( host, 8080 );
+        Socket sock = new Socket(host, 6789);
         sock.getOutputStream().write(msg.getBytes());
         sock.getOutputStream().flush();
         sock.close();

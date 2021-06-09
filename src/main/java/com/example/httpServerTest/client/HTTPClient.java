@@ -1,4 +1,6 @@
-package com.example.httpServerTest;
+package com.example.httpServerTest.client;
+
+import io.netty.util.CharsetUtil;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -69,11 +71,15 @@ public class HTTPClient {
 
         if (response.substring(response.indexOf(" ") + 1,
                 response.indexOf(" ") + 4).equals("200")) {
-            //Save the payload of the HTTP response message
+//            Save the payload of the HTTP response message
             File file = new File("index.html");
+
             PrintWriter printWriter = new PrintWriter(file);
-            printWriter.println(response.substring(response.indexOf("\r\n\r\n") + 4));
+            byte[] bytes = response.substring(response.indexOf("\r\n\r\n") + 4).getBytes(CharsetUtil.UTF_8);
+            String s = new String(bytes);
+            System.out.println(s);
             printWriter.close();
+
         } else
             System.out.println("HTTP request failed");
 
@@ -87,7 +93,7 @@ public class HTTPClient {
             String host = "localhost";
 
             // Port
-            int port = 8080;
+            int port = 6789;
 
             // Path
             String path = "/test";
