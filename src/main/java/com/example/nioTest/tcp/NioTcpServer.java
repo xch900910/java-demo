@@ -19,32 +19,33 @@ public class NioTcpServer {
         System.out.println("服务器启动，端口：" + 9999);
         Selector selector = Selector.open();
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
-        while (selector.select() > 0) {
-            Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
-            while (iterator.hasNext()) {
-                SelectionKey key = iterator.next();
-                if (key.isAcceptable()) {
-                    SocketChannel socketChannel = serverSocketChannel.accept();
-                    socketChannel.configureBlocking(false);
-                    socketChannel.register(selector, SelectionKey.OP_READ);
-                }
-                if (key.isReadable()) {
-                    SocketChannel channel = (SocketChannel) key.channel();
-                    ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-                    int length = -1;
-                    while ((length = channel.read(byteBuffer)) > 0) {
-                        byteBuffer.flip();
-                        System.out.println("服务器收到：" + new String(byteBuffer.array(), 0, byteBuffer.limit()));
-                        byteBuffer.clear();
+        while (true) {
+            while (selector.select() > 0) {
+                Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
+                while (iterator.hasNext()) {
+                    SelectionKey key = iterator.next();
+                    if (key.isAcceptable()) {
+                        SocketChannel socketChannel = serverSocketChannel.accept();
+                        socketChannel.configureBlocking(false);
+                        socketChannel.register(selector, SelectionKey.OP_READ);
                     }
-                    channel.close();
+                    if (key.isReadable()) {
+                        SocketChannel channel = (SocketChannel) key.channel();
+                        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+                        int length = -1;
+                        while ((length = channel.read(byteBuffer)) > 0) {
+                            byteBuffer.flip();
+                            System.out.println("服务器收到：" + new String(byteBuffer.array(), 0, byteBuffer.limit()));
+                            byteBuffer.clear();
+                        }
+                        channel.close();
+                    }
+                    //移除key
+                    iterator.remove();
                 }
-                //移除key
-                iterator.remove();
             }
         }
-        //关闭连接
-        serverSocketChannel.close();
+
 
     }
 
