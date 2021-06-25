@@ -1,6 +1,7 @@
 package com.example.testSpring.ioc;
 
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @author xch900910
@@ -9,8 +10,9 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
  */
 public class TestIoc {
     public static void main(String[] args) {
-        FileSystemXmlApplicationContext fileSystemXmlApplicationContext = new FileSystemXmlApplicationContext("");
-
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        HelloService helloService = (HelloService) context.getBean("helloService");
+        helloService.say("world");
     }
 
 }
