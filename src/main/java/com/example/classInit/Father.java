@@ -1,25 +1,23 @@
 package com.example.classInit;
 
-public class Father {
+public abstract class Father {
     public String fStr1 = "father1";
     protected String fStr2 = "father2";
     private String fStr3 = "father3";
 
+
     public Father(String fStr1) {
         this.fStr1 = fStr1;
-        System.out.println("1 param contract");
+        System.out.println("1 param contract " + fStr1 + " " + this);
     }
 
-    public Father() {
-        System.out.println("Father constructor be called");
+    private Father() {
+        System.out.println("Father constructor be called " + this);
     }
 
-    {
-        System.out.println("Father common block be called");
-    }
 
-    static {
-        System.out.println("Father static block be called");
+    public Father(String fStr1, String fStr2) {
+        System.out.println("Father 2constructor be called " + this);
     }
 
 
