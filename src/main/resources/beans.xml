@@ -5,10 +5,17 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="helloService"
-          class="com.example.testSpring.ioc.HelloService">
+          class="com.example.testSpring.ioc.HelloService" init-method="init" depends-on="aService">
         <!-- additional collaborators and configuration for this bean go here -->
+        <property name="aService" ref="aService"></property>
     </bean>
 
+    <bean name="aService" class="com.example.testSpring.ioc.AService">
+        <constructor-arg name="bService" ref="bService"></constructor-arg>
+    </bean>
+    <bean name="bService" class="com.example.testSpring.ioc.BService">
+        <property name="helloService" ref="aService"></property>
+    </bean>
 
     <!-- more bean definitions for data access objects go here -->
 
