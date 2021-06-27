@@ -2,6 +2,7 @@ package com.example.testSpring.aop;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Primary;
 
 /**
  * @author xch900910
@@ -10,9 +11,15 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @EnableAspectJAutoProxy
 public class AopConfig {
-    @Bean
-    public HelloService helloController() {
+    @Bean()
+    public HelloServiceImpl helloServiceImpl() {
         return new HelloServiceImpl();
+    }
+
+    @Bean
+    @Primary
+    public HelloServiceImpl2 helloServiceImpl2() {
+        return new HelloServiceImpl2();
     }
 
     @Bean

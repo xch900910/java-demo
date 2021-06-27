@@ -8,9 +8,9 @@ package com.example.testSpring.aop;
 public class HelloServiceImpl implements HelloService {
 
     @Override
-    public String say(String name) {
+    public void say(String name) {
         System.out.println(name + " say");
-        return name + " say: He didn't let everyone down ";
+//        return name + " say: He didn't let everyone down ";
     }
 
 

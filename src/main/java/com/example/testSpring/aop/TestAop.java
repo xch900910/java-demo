@@ -14,4 +14,11 @@ public class TestAop {
         helloService.say("Ryan");
     }
 
+//    public static void main(String[] args) {
+//        HelloService helloService = new HelloServiceImpl();
+//        HelloServiceImplProxy helloServiceImplProxy = new HelloServiceImplProxy(helloService);
+//        HelloService proxy = helloServiceImplProxy.getProxy();
+//        proxy.say("Ryan");
+//    }
+
 }

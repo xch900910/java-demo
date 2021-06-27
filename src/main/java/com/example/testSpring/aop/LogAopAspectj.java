@@ -14,7 +14,7 @@ import java.util.Arrays;
 @Aspect
 public class LogAopAspectj {
 
-    @Pointcut("execution(public * com.example.testSpring.aop.HelloServiceImpl.*(..))")
+    @Pointcut("execution(public * com.example.testSpring.aop.HelloServiceImpl2.*(..))")
     public void log() {
 
     }

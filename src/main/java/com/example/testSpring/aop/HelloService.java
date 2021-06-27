@@ -6,5 +6,5 @@ package com.example.testSpring.aop;
  * @date 2021/6/27 16:04
  */
 public interface HelloService {
-    String say(String name);
+    void say(String name);
 }
