@@ -13,10 +13,10 @@ public class TestIoc {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         HelloService helloService = (HelloService) context.getBean("helloService");
         helloService.say("world");
-        AService aService = (AService) context.getBean("aService");
-        aService.aSay();
-        BService bService = (BService) context.getBean("bService");
-        bService.bSay();
+//        AService aService = (AService) context.getBean("aService");
+//        aService.aSay();
+//        BService bService = (BService) context.getBean("bService");
+//        bService.bSay();
     }
 
 }
