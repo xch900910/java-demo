@@ -12,7 +12,10 @@ public class JoinDemo {
         JoinDemo joinDemo = new JoinDemo();
         TimerThread timerThread = joinDemo.new TimerThread();
         timerThread.start();
-        timerThread.join();
+        synchronized (timerThread) {
+            timerThread.wait();
+        }
+//        timerThread.join();
         out.println(Thread.currentThread().getName() + " is end");
     }
 
