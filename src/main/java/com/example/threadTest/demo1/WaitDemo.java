@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @Desc
  * @Date 2020/11/14 20:12
  **/
-public class ObjectDemo {
+public class WaitDemo {
     public static void main(String[] args) {
         final Object lock = new Object();
         new Thread(new Runnable() {
@@ -21,7 +21,7 @@ public class ObjectDemo {
                         TimeUnit.SECONDS.sleep(1);
                         System.out.println("thread A do wait method");
                         lock.wait();
-                        System.out.println("wait end");
+                        System.out.println("thread A wait end");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

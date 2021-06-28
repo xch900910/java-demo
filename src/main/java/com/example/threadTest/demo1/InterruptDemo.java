@@ -5,9 +5,9 @@ package com.example.threadTest.demo1;
  * @Des :
  * @create: 2020-11-13 18:28
  **/
-public class ThreadDemo {
+public class InterruptDemo {
     public static void main(String[] args) {
-         Object object = new Object();
+        Object object = new Object();
         Thread thread1 = new Thread(() -> {
             synchronized (object) { // 获取监视器锁
                 try {
