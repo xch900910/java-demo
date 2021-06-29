@@ -1,7 +1,7 @@
-package com.example.tutorial.test;// See README.txt for information and build instructions.
+package com.example.protobufTest.test;// See README.txt for information and build instructions.
 
-import com.example.tutorial.protos.AddressBook;
-import com.example.tutorial.protos.Person;
+import com.example.protobufTest.protos.AddressBook;
+import com.example.protobufTest.protos.Person;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
