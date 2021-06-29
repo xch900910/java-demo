@@ -16,5 +16,7 @@ public class ThreadPoolExecutorDemo {
                 60, TimeUnit.SECONDS, new SynchronousQueue<>());
         threadPoolExecutor.execute(() -> System.out.println(Thread.currentThread().getName() + " a"));
         threadPoolExecutor.execute(() -> System.out.println(Thread.currentThread().getName() + " b"));
+        SerialExecutor serialExecutor = new SerialExecutor(threadPoolExecutor);
+        serialExecutor.execute(() -> System.out.println("C"));
     }
 }
