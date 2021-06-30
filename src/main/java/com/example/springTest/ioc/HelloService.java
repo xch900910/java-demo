@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class HelloService {
-    @Value("#{lynch.person.name}")
+    @Value("${lynch.person.name}")
     private String name;
 
 
