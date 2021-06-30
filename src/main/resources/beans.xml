@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="helloService"
-          class="com.example.testSpring.ioc.HelloService" init-method="init">
+          class="com.example.springTest.ioc.HelloService" init-method="init">
         <!-- additional collaborators and configuration for this bean go here -->
         <!--        <property name="aService" ref="aService"></property>-->
     </bean>

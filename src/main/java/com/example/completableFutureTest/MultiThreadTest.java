@@ -1,4 +1,4 @@
-package com.example.testCompletableFuture;
+package com.example.completableFutureTest;
 
 import java.util.Arrays;
 import java.util.List;

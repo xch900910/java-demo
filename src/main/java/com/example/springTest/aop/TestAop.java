@@ -1,4 +1,4 @@
-package com.example.testSpring.aop;
+package com.example.springTest.aop;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

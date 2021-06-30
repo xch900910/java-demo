@@ -1,4 +1,4 @@
-package com.example.testSpring.ioc;
+package com.example.springTest.ioc;
 
 /**
  * @author xch900910

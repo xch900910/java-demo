@@ -1,4 +1,4 @@
-package com.example.testCompletableFuture;
+package com.example.completableFutureTest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

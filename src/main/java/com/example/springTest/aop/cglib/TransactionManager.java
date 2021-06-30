@@ -1,4 +1,4 @@
-package com.example.testSpring.aop.cglib;
+package com.example.springTest.aop.cglib;
 
 import lombok.extern.slf4j.Slf4j;
 

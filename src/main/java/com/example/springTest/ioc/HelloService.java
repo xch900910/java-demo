@@ -1,4 +1,4 @@
-package com.example.testSpring.ioc;
+package com.example.springTest.ioc;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

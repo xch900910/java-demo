@@ -1,4 +1,4 @@
-package com.example.testSpring.aop;
+package com.example.springTest.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -14,7 +14,7 @@ import java.util.Arrays;
 @Aspect
 public class LogAopAspectj {
 
-    @Pointcut("execution(public * com.example.testSpring.aop.HelloServiceImpl2.*(..))")
+    @Pointcut("execution(public * com.example.springTest.aop.HelloServiceImpl2.*(..))")
     public void log() {
 
     }
