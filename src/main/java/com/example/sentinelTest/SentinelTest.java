@@ -1,4 +1,4 @@
-package sentinelTest;
+package com.example.sentinelTest;
 
 import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.SphU;
@@ -9,7 +9,6 @@ import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import com.example.workNote.ServiceException;
 
-import javax.xml.ws.Service;
 import java.util.ArrayList;
 import java.util.List;
 
