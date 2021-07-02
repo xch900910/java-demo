@@ -15,11 +15,7 @@ public class CompletableFutureTest {
 //        System.out.println(cf.get());
         CompletableFuture.runAsync(() -> {
             System.out.println("A");
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
         }).thenRun(() -> System.out.println("b"));
         CompletableFuture.runAsync(() -> {
         }).thenAccept(resultA -> {
@@ -31,6 +27,7 @@ public class CompletableFutureTest {
         });
         CompletableFuture.supplyAsync(() -> "resultA").thenAccept(resultA -> {
         });
-        CompletableFuture.supplyAsync(() -> "resultA").thenApply(resultA -> resultA + " resultB");
+        CompletableFuture<String> stringCompletableFuture = CompletableFuture.supplyAsync(() -> "resultA").thenApply(resultA -> resultA + " resultB");
+        
     }
 }
