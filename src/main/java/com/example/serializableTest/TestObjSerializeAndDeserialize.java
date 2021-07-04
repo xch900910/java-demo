@@ -1,7 +1,6 @@
 package com.example.serializableTest;
 
 import java.io.*;
-import java.text.MessageFormat;
 
 /**
  * @author xch900910
@@ -15,7 +14,6 @@ public class TestObjSerializeAndDeserialize {
         SerializePerson();
         /**反序列Perons对象**/
         Person p = DeserializePerson();
-        System.out.println(MessageFormat.format("name={0},age={1},sex={2}", p.getName(), p.getAge(), p.getSex()));
     }
 
     /**

@@ -9,7 +9,6 @@ package com.example.serializableTest;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
 
 @Data
 public class Person implements Serializable {
@@ -17,10 +16,6 @@ public class Person implements Serializable {
     private String name;
     private String sex;
 
-    public static void main(String[] args) {
-        System.out.println("男".getBytes(StandardCharsets.UTF_8));
-        System.out.println();
-    }
 }
 
 
