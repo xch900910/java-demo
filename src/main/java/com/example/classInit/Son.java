@@ -19,12 +19,14 @@ public class Son extends Father {
         System.out.println("son 1 param constract");
     }
 
+
     public static void main(String[] args) {
         Son son = new Son("dddd");
         System.out.println();
         Son2 son2 = new Son2();
         System.out.println(son.fStr1);
         System.out.println(son2.fStr1);
+        Son.testStatic();
 //        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
 //
 //        for (int i = 0; i < 1000000; i++) {

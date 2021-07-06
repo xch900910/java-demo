@@ -20,5 +20,9 @@ public abstract class Father {
         System.out.println("Father 2constructor be called " + this);
     }
 
+    public static void testStatic() {
+        System.out.println("father testStatic");
+    }
+
 
 }
