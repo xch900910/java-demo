@@ -42,7 +42,9 @@ public class LogAopAspectj {
     @Around("log()")
     public void Around(ProceedingJoinPoint proceedingJoinPoint) {
         try {
+            System.out.println("enter around");
             proceedingJoinPoint.proceed();
+            System.out.println("exit around");
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }

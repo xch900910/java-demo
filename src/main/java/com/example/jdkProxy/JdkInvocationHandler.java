@@ -17,7 +17,9 @@ public class JdkInvocationHandler<T> implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("调用方法前");
         Object invoke = method.invoke(target, args);
+        System.out.println("调用方法后");
 
         return invoke;
     }

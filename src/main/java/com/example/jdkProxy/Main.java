@@ -13,7 +13,6 @@ public class Main {
         JdkInvocationHandler<People> peopleJdkInvocationHandler = new JdkInvocationHandler<>(people);
         People o = (People) Proxy.newProxyInstance(people.getClass().getClassLoader(), new Class<?>[]{People.class}, peopleJdkInvocationHandler);
         o.say();
-        System.out.println(o.toString());
 
     }
 }
